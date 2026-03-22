@@ -40,7 +40,21 @@ document.addEventListener('DOMContentLoaded',()=>{
   const obs=new IntersectionObserver(entries=>{
     entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}});
   },{threshold:.1,rootMargin:'0px 0px -30px 0px'});
-  document.querySelectorAll('.fade-up').forEach(el=>obs.observe(el));
+  document.querySelectorAll('.fade-up, .timeline-item').forEach(el=>obs.observe(el));
+
+  const timeline = document.querySelector('.recap-timeline');
+  const timelineLine = document.querySelector('.timeline-line');
+  if (timeline && timelineLine) {
+    window.addEventListener('scroll', () => {
+      const rect = timeline.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      if (rect.top < windowHeight && rect.bottom > 0) {
+        let progress = (windowHeight - rect.top) / (rect.height + windowHeight / 2);
+        progress = Math.max(0, Math.min(1, progress));
+        timelineLine.style.setProperty('--line-progress', `${progress * 100}%`);
+      }
+    }, {passive: true});
+  }
 
   document.querySelectorAll('a[href^="#"]').forEach(a=>{
     a.addEventListener('click',e=>{
