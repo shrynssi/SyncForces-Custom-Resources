@@ -1,0 +1,31 @@
+export interface Niche {
+  id: string;
+  title: string;
+  niche_plural: string;
+  revenue_potential: string;
+  niche_business: string;
+  cheap_fix: string;
+  premium_job: string;
+  niche_work: string;
+  niche_work_short: string;
+  niche_contractors: string;
+  niche_companies: string;
+  customer_type_plural: string;
+  customer_type_singular: string;
+  pain_point_example: string;
+  ad_headline_example: string;
+  niche_estimate: string;
+  sample_address: string;
+  zip_1: string;
+  zip_2: string;
+  zip_3: string;
+  zip_4: string;
+  zip_5: string;
+  roi_js_min: string;
+  roi_js_max: string;
+  roi_js_val: string;
+  roi_js_step: string;
+  roi_js_val_fmt: string;
+  ad_images?: string[];
+  adsImage: string;
+}
