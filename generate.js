@@ -41,7 +41,13 @@ const niches = [
     niche_estimate: "damage assessment",
     sample_address: "456 Oak Rd, Cleveland OH",
     zip_1: "44101", zip_2: "44113", zip_3: "44114", zip_4: "44115", zip_5: "44102",
-    roi_js_min: "2000", roi_js_max: "100000", roi_js_val: "8000", roi_js_step: "1000", roi_js_val_fmt: "8,000"
+    roi_js_min: "2000", roi_js_max: "100000", roi_js_val: "8000", roi_js_step: "1000", roi_js_val_fmt: "8,000",
+    ad_images: [
+      "img/water-ad-1.png",
+      "img/water-ad-2.png",
+      "img/water-ad-3.png",
+      "img/water-ad-4.png"
+    ]
   },
   {
     id: "landscaping",
@@ -173,6 +179,18 @@ function processNiche(niche) {
   html = html.replace(/43235/g, niche.zip_3);
   html = html.replace(/43085/g, niche.zip_4);
   html = html.replace(/43016/g, niche.zip_5);
+
+  // Ad Images
+  let adsHtml = "";
+  if (niche.ad_images && niche.ad_images.length > 0) {
+    adsHtml = niche.ad_images.map((img, idx) => `<img src="${img}" alt="${niche.niche_business} ad ${idx + 1}" loading="lazy">`).join('\n            ');
+  } else {
+    adsHtml = `<img src="img/ad-before-after.png" alt="Before/After ad" loading="lazy">
+            <img src="img/ad-embarrassed.png" alt="Pain point ad" loading="lazy">
+            <img src="img/ad-special-offer.png" alt="Scarcity ad" loading="lazy">`;
+  }
+  html = html.replace('<!-- {{ADS_GALLERY}} -->', adsHtml);
+  html = html.replace('{{NICHE_COMPANIES}}', niche.niche_companies);
   
   // ROI Calculator
   html = html.replace(/min="5000" max="50000" value="15000" step="1000"/g, `min="${niche.roi_js_min}" max="${niche.roi_js_max}" value="${niche.roi_js_val}" step="${niche.roi_js_step}"`);
