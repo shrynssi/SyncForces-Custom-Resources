@@ -183,8 +183,7 @@ function processNiche(niche) {
   // Ad Images
   let adsHtml = "";
   if (niche.ad_images && niche.ad_images.length > 0) {
-    const timestamp = Date.now();
-    adsHtml = niche.ad_images.map((img, idx) => `<img src="${img}?t=${timestamp}" alt="${niche.niche_business} ad ${idx + 1}" loading="lazy">`).join('\n            ');
+    adsHtml = niche.ad_images.map((img, idx) => `<img src="${img}" alt="${niche.niche_business} ad ${idx + 1}" loading="lazy">`).join('\n            ');
   } else {
     adsHtml = `<img src="img/ad-before-after.png" alt="Before/After ad" loading="lazy">
             <img src="img/ad-embarrassed.png" alt="Pain point ad" loading="lazy">
