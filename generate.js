@@ -43,10 +43,10 @@ const niches = [
     zip_1: "44101", zip_2: "44113", zip_3: "44114", zip_4: "44115", zip_5: "44102",
     roi_js_min: "2000", roi_js_max: "100000", roi_js_val: "8000", roi_js_step: "1000", roi_js_val_fmt: "8,000",
     ad_images: [
-        "img/water-ad-1.jpg",
-        "img/water-ad-2.jpg",
-        "img/water-ad-3.jpg",
-        "img/water-ad-4.jpg"
+        "img/water-ad-1.png",
+        "img/water-ad-2.png",
+        "img/water-ad-3.png",
+        "img/water-ad-4.png"
       ]
   },
   {
@@ -183,7 +183,8 @@ function processNiche(niche) {
   // Ad Images
   let adsHtml = "";
   if (niche.ad_images && niche.ad_images.length > 0) {
-    adsHtml = niche.ad_images.map((img, idx) => `<img src="${img}" alt="${niche.niche_business} ad ${idx + 1}" loading="lazy">`).join('\n            ');
+    const timestamp = Date.now();
+    adsHtml = niche.ad_images.map((img, idx) => `<img src="${img}?t=${timestamp}" alt="${niche.niche_business} ad ${idx + 1}" loading="lazy">`).join('\n            ');
   } else {
     adsHtml = `<img src="img/ad-before-after.png" alt="Before/After ad" loading="lazy">
             <img src="img/ad-embarrassed.png" alt="Pain point ad" loading="lazy">
