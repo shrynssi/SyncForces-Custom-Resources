@@ -20,7 +20,7 @@ export default function Pricing({ niche }: Props) {
         <h3>Pay Per Estimate</h3>
         <div className="ps2">Only pay when we book a qualified estimate</div>
         <div className="sf">Setup Fee: <strong>$750</strong></div>
-        <div className="amt">$175</div>
+        <div className="amt">$125</div>
         <div className="per">per qualified estimate</div>
         <ul>
           <li>Targeted Meta ad campaigns</li>
