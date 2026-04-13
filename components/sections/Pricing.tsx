@@ -34,7 +34,8 @@ export default function Pricing({ niche }: Props) {
         </ul>
         <a href="https://book.stripe.com/6oU9AT0Va5gDeQZ8d5aVa0q" className="btn-p" target="_blank" rel="noopener noreferrer">Get Started →</a>
       </div>
-      <div className="pc fade-up d2">
+      <div className="pc bundle fade-up d2">
+        <div className="popular-badge">MOST POPULAR</div>
         <h3>65 Estimate Bundle</h3>
         <div className="ps2">Guaranteed volume, discounted pricing</div>
         <div className="sf">Bundled Price: <strong>$6,305</strong></div>

@@ -9,11 +9,11 @@ export default function Hero({ niche }: Props) {
   return (
     <>
 <section className="hero" id="top">
-  <div className="container fade-up">
-    <div className="hero-badge">🏠 Built for {niche.niche_plural}</div>
-    <h1>Stop Wasting Time on Tire-Kickers Who Can't Afford Your Work 🚫</h1>
-    <p className="hero-sub">We install a done-for-you system that books 30–60 qualified estimates in 90 days, follows up automatically, and builds a pipeline that can bring in {niche.revenue_potential} in new jobs — without you chasing leads or touching any tech.</p>
-    <a href="#how" className="btn-hero">See How It Works 👇</a>
+  <div className="container">
+    <div className="hero-badge fade-up" data-delay="0">🏠 Built for {niche.niche_plural}</div>
+    <h1 className="fade-up" data-delay="200">Stop Wasting Time on Tire-Kickers Who Can't Afford Your Work 🚫</h1>
+    <p className="hero-sub fade-up" data-delay="400">We install a done-for-you system that books 30–60 qualified estimates in 90 days, follows up automatically, and builds a pipeline that can bring in {niche.revenue_potential} in new jobs — without you chasing leads or touching any tech.</p>
+    <a href="#how" className="btn-hero fade-up cta-pulse" data-delay="600">See How It Works 👇</a>
   </div>
 </section>
     </>

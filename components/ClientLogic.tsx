@@ -14,6 +14,13 @@ export default function ClientLogic() {
       const s = tab.dataset.step;
       document.querySelectorAll('.step-tab').forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
+      
+      const progressBar = document.getElementById('tab-progress');
+      if (progressBar) {
+        const percent = (parseInt(s || '1') / 6) * 100;
+        progressBar.style.width = `${percent}%`;
+      }
+
       document.querySelectorAll('.step-panel').forEach(p => {
         p.classList.remove('active');
         if (p.id === 'step-' + s) p.classList.add('active');
@@ -55,8 +62,15 @@ export default function ClientLogic() {
         el.textContent = isCurrency ? '$' + target.toLocaleString() : target.toString();
         return;
       }
+      
+      if (isCurrency) {
+        el.classList.remove('bounce');
+        void el.offsetWidth; // trigger reflow
+        el.classList.add('bounce');
+      }
+
       const diff = target - c;
-      const steps = 10;
+      const steps = 24; // ~400ms at 60fps
       let i = 0;
       function tick() {
         i++;
@@ -78,35 +92,42 @@ export default function ClientLogic() {
       calc();
     }
 
-    // 3. Fade-up Intersection Observer
+    // 3. Intersection Observer (Animations)
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => {
         if (e.isIntersecting) {
-          e.target.classList.add('visible');
-          obs.unobserve(e.target);
-        }
+            const delay = e.target.getAttribute('data-delay');
+            if (delay) {
+              (e.target as HTMLElement).style.transitionDelay = `${delay}ms`;
+              (e.target as HTMLElement).style.setProperty('--delay', `${delay}ms`);
+            }
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
+          }
       });
-    }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+    }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
     
-    document.querySelectorAll('.fade-up, .timeline-item').forEach(el => obs.observe(el));
+    document.querySelectorAll('.fade-up, .fade-in, .slide-left, .slide-right, .scale-in, .timeline-item').forEach(el => obs.observe(el));
 
-    // 4. Recap Timeline
-    const timeline = document.querySelector('.recap-timeline');
-    const timelineLine = document.querySelector('.timeline-line') as HTMLElement | null;
+    // 4. Recap Timeline & Onboarding Timeline
+    const timelines = document.querySelectorAll('.recap-timeline');
     
     const handleScrollTimeline = () => {
-      if (timeline && timelineLine) {
-        const rect = timeline.getBoundingClientRect();
-        const windowHeight = window.innerHeight;
-        if (rect.top < windowHeight && rect.bottom > 0) {
-          let progress = (windowHeight - rect.top) / (rect.height + windowHeight / 2);
-          progress = Math.max(0, Math.min(1, progress));
-          timelineLine.style.setProperty('--line-progress', `${progress * 100}%`);
+      timelines.forEach(timeline => {
+        const timelineLine = timeline.querySelector('.timeline-line') as HTMLElement | null;
+        if (timeline && timelineLine) {
+          const rect = timeline.getBoundingClientRect();
+          const windowHeight = window.innerHeight;
+          if (rect.top < windowHeight && rect.bottom > 0) {
+            let progress = (windowHeight - rect.top) / (rect.height + windowHeight / 2);
+            progress = Math.max(0, Math.min(1, progress));
+            timelineLine.style.setProperty('--line-progress', `${progress * 100}%`);
+          }
         }
-      }
+      });
     };
     
-    if (timeline && timelineLine) {
+    if (timelines.length > 0) {
       window.addEventListener('scroll', handleScrollTimeline, { passive: true });
       handleScrollTimeline();
     }
@@ -133,7 +154,7 @@ export default function ClientLogic() {
         [est, cr, js2].forEach(s => s.removeEventListener('input', handleInput));
       }
       obs.disconnect();
-      if (timeline && timelineLine) {
+      if (timelines.length > 0) {
         window.removeEventListener('scroll', handleScrollTimeline);
       }
       links.forEach(a => a.removeEventListener('click', handleSmoothScroll));

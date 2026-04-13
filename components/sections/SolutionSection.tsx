@@ -1,5 +1,6 @@
 import React from 'react';
 import { Niche } from '@/types/niche';
+import ComparisonTable from './ComparisonTable';
 
 interface Props {
   niche: Niche;
@@ -24,6 +25,9 @@ export default function SolutionSection({ niche }: Props) {
         <div className="step-tab" data-step="4">✅ Qualify</div>
         <div className="step-tab" data-step="5">📅 Book</div>
         <div className="step-tab" data-step="6">🔔 Remind</div>
+        <div className="tabs-progress-container" style={{ height: '4px', background: 'var(--border-color)', borderRadius: '2px', marginTop: '4px', overflow: 'hidden' }}>
+          <div className="tabs-progress-bar" id="tab-progress" style={{ height: '100%', background: 'var(--primary)', width: '16.66%', transition: 'width 0.3s ease' }}></div>
+        </div>
       </div>
 
       <div className="steps-content">
@@ -213,12 +217,13 @@ export default function SolutionSection({ niche }: Props) {
       <div className="roi-line"></div>
       <div className="roi-results">
         <div className="roi-box"><div className="big" id="r-jobs" data-c="0">5</div><div className="lbl">Jobs You'll Close / Month</div></div>
-        <div className="roi-box"><div className="big" id="r-rev" data-c="0">$75,000</div><div className="lbl">Projected Monthly Revenue</div></div>
+        <div className="roi-box"><div className="big green" id="r-rev" data-c="0">$75,000</div><div className="lbl">Projected Monthly Revenue</div></div>
       </div>
     </div>
   </div>
 </section>
 
+<ComparisonTable niche={niche} />
 
 <section className="section" id="paths">
   <div className="container">
@@ -228,7 +233,7 @@ export default function SolutionSection({ niche }: Props) {
       <p className="section-sub">Right now you're at a fork in the road. Which one are you taking?</p>
     </div>
     <div className="paths-grid">
-      <div className="path-card smart fade-up">
+      <div className="path-card smart slide-left">
         <div className="p-emoji">🚀</div>
         <h3>Smart Path</h3>
         <div className="p-sub">You work with us</div>
@@ -239,8 +244,8 @@ export default function SolutionSection({ niche }: Props) {
         <div className="ps"><span className="t">Month 3</span><span className="d">You need to hire. Scale is within reach</span></div>
         <div className="p-result">✅ Predictable revenue. You can finally plan, invest, and grow.</div>
       </div>
-      <div className="paths-vs">VS</div>
-      <div className="path-card silly fade-up d1">
+      <div className="paths-vs fade-in" data-delay="300">VS</div>
+      <div className="path-card silly slide-right">
         <div className="p-emoji">🤡</div>
         <h3>Silly Path</h3>
         <div className="p-sub">You keep doing it alone</div>

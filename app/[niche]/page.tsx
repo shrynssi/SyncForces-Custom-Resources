@@ -6,6 +6,7 @@ import ProblemSection from '@/components/sections/ProblemSection';
 import SolutionSection from '@/components/sections/SolutionSection';
 import Subsystems from '@/components/sections/Subsystems';
 import Pricing from '@/components/sections/Pricing';
+import OnboardingTimeline from '@/components/sections/OnboardingTimeline';
 import Guarantee from '@/components/sections/Guarantee';
 import Testimonials from '@/components/sections/Testimonials';
 import FAQ from '@/components/sections/FAQ';
@@ -36,6 +37,7 @@ export default async function NichePage({ params }: Props) {
       <SolutionSection niche={nicheData} />
       <Subsystems niche={nicheData} />
       <Pricing niche={nicheData} />
+      <OnboardingTimeline niche={nicheData} />
       <Guarantee niche={nicheData} />
       <Testimonials niche={nicheData} />
       <FAQ niche={nicheData} />
