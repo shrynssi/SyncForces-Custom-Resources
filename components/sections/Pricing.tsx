@@ -35,16 +35,16 @@ export default function Pricing({ niche }: Props) {
         <a href="https://book.stripe.com/6oU9AT0Va5gDeQZ8d5aVa0q" className="btn-p" target="_blank" rel="noopener noreferrer">Get Started →</a>
       </div>
       <div className="pc fade-up d2">
-        <h3>15 Estimate Bundle</h3>
+        <h3>65 Estimate Bundle</h3>
         <div className="ps2">Guaranteed volume, discounted pricing</div>
-        <div className="sf">Bundled Price: <strong>$1,455</strong></div>
+        <div className="sf">Bundled Price: <strong>$6,305</strong></div>
         <div className="amt">$97</div>
         <div className="per">per qualified estimate</div>
-        <div className="gb">✅ 15 Estimates Guaranteed — Or We Work For Free Until We Do</div>
+        <div className="gb">✅ 65 Estimates Guaranteed — Or We Work For Free Until We Do</div>
         <ul>
           <li>Everything in Pay Per Estimate</li>
           <li>Discounted per-estimate cost</li>
-          <li>Guaranteed 15 estimates</li>
+          <li>Guaranteed 65 estimates</li>
           <li>Priority support & optimization</li>
           <li>Predictable budget</li>
           <li><strong>Client covers ad spend</strong> (min. $30/day)</li>
