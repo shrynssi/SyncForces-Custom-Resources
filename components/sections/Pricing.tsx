@@ -36,9 +36,9 @@ export default function Pricing({ niche }: Props) {
       </div>
       <div className="pc bundle fade-up d2">
         <div className="popular-badge">MOST POPULAR</div>
-        <h3>65 Estimate Bundle</h3>
+        <h3>15 Estimate Bundle</h3>
         <div className="ps2">Guaranteed volume, discounted pricing</div>
-        <div className="sf">Bundled Price: <strong>$6,305</strong></div>
+        <div className="sf">Bundled Price: <strong>$1,455</strong></div>
         <div className="amt">$97</div>
         <div className="per">per qualified estimate</div>
         <div className="gb">✅ 65 Estimates Guaranteed — Or We Work For Free Until We Do</div>
