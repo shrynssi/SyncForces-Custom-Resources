@@ -20,9 +20,9 @@ export default function ComparisonTable({ niche }: Props) {
             <thead>
               <tr>
                 <th>Feature</th>
-                <th>HomeAdvisor/Angi</th>
-                <th>Hiring a Marketer</th>
-                <th className="sf-col">
+                <th style={{ fontWeight: 'normal' }}>HomeAdvisor/Angi</th>
+                <th style={{ fontWeight: 'normal' }}>Hiring a Marketer</th>
+                <th className="sf-col" style={{ fontWeight: 800 }}>
                   <div className="rec-badge">RECOMMENDED</div>
                   SyncForces ✅
                 </th>

@@ -132,10 +132,35 @@ export default function SolutionSection({ niche }: Props) {
       <div className="panel-top">
         <div className="p-icon">📅</div>
         <h3>They Book Right Into Your Calendar</h3>
-        <p>Qualified leads pick a time that works for both of you. No back-and-forth, no phone tag. Just booked estimates.</p>
+        <p>Our AI voice assistant instantly qualifies leads and books them directly into a time that works for both of you. No back-and-forth, no phone tag. Just booked estimates.</p>
       </div>
       <div className="panel-body">
-        <div className="panel-visual">
+        <div className="panel-visual ai-grid">
+          <div className="ai-voice-diagram">
+            <div className="ai-call-header">
+              <div className="pulse-dot"></div>
+              <span>Live AI Voice Assistant</span>
+            </div>
+            <div className="caller bot">
+              <span className="icon">🤖</span>
+              <p>Hi! I saw you requested a {niche.niche_work_short} estimate. I can get you scheduled now. What time works best?</p>
+            </div>
+            <div className="caller user">
+              <span className="icon">👤</span>
+              <p>Do you have anything on Wednesday morning?</p>
+            </div>
+            <div className="caller bot">
+              <span className="icon">🤖</span>
+              <p>Yes, we have 10:00 AM or 11:00 AM available on Wednesday. Which do you prefer?</p>
+            </div>
+            <div className="caller user">
+              <span className="icon">👤</span>
+              <p>Let's do 11:00 AM.</p>
+            </div>
+            <div className="ai-call-outcome">
+              <span className="outcome-badge">✅ Qualified & Booked</span>
+            </div>
+          </div>
           <div className="mini-cal">
             <div className="cal-bar">
               <h4>📅 Your Calendar</h4>
