@@ -35,18 +35,18 @@ export default function Pricing({ niche }: Props) {
         <a href="https://book.stripe.com/6oU9AT0Va5gDeQZ8d5aVa0q" className="btn-p" target="_blank" rel="noopener noreferrer">Get Started →</a>
       </div>
       <div className="pc fade-up d2">
-        <h3>Monthly Retainer</h3>
-        <div className="ps2">Guaranteed volume, predictable pricing</div>
-        <div className="sf">No Setup Fee</div>
-        <div className="amt">$2,500</div>
-        <div className="per">per month</div>
-        <div className="gb">✅ 30 Estimates Guaranteed in 90 Days — Or We Continue Free + Cover $5K Ad Spend</div>
+        <h3>15 Estimate Bundle</h3>
+        <div className="ps2">Guaranteed volume, discounted pricing</div>
+        <div className="sf">Bundled Price: <strong>$1,455</strong></div>
+        <div className="amt">$97</div>
+        <div className="per">per qualified estimate</div>
+        <div className="gb">✅ 15 Estimates Guaranteed — Or We Continue Free + Cover $5K Ad Spend</div>
         <ul>
           <li>Everything in Pay Per Estimate</li>
-          <li>No per-estimate costs</li>
-          <li>Guaranteed 30 estimates in 90 days</li>
+          <li>Discounted per-estimate cost</li>
+          <li>Guaranteed 15 estimates</li>
           <li>Priority support & optimization</li>
-          <li>Predictable monthly budget</li>
+          <li>Predictable budget</li>
           <li><strong>Client covers ad spend</strong> (min. $30/day)</li>
         </ul>
         <a href="https://buy.stripe.com/4gM6oHeM024rcIRdxpaVa0r" className="btn-p" target="_blank" rel="noopener noreferrer">Get Started →</a>
