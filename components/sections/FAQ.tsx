@@ -30,18 +30,16 @@ export default function FAQ({ niche }: Props) {
         </div>
         <div className="faq-list">
           {faqs.map((faq, idx) => (
-            <div 
-              key={idx} 
-              className={`faq-item fade-up ${openIdx === idx ? 'open' : ''}`}
-              data-delay={idx * 100}
-            >
-              <div className="faq-question" onClick={() => setOpenIdx(openIdx === idx ? null : idx)}>
-                <h4 className={openIdx === idx ? 'bold-q' : ''}>{faq.q}</h4>
-                <span className="faq-plus">+</span>
-              </div>
-              <div className="faq-answer-wrapper" style={{ maxHeight: openIdx === idx ? '200px' : '0' }}>
-                <div className="faq-answer">
-                  <p>{faq.a}</p>
+            <div key={idx} className="fade-up" data-delay={idx * 100}>
+              <div className={`faq-item ${openIdx === idx ? 'open' : ''}`}>
+                <div className="faq-question" onClick={() => setOpenIdx(openIdx === idx ? null : idx)}>
+                  <h4 className={openIdx === idx ? 'bold-q' : ''}>{faq.q}</h4>
+                  <span className="faq-plus">+</span>
+                </div>
+                <div className="faq-answer-wrapper">
+                  <div className="faq-answer">
+                    <p>{faq.a}</p>
+                  </div>
                 </div>
               </div>
             </div>
