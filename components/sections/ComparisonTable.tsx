@@ -57,7 +57,7 @@ export default function ComparisonTable({ niche }: Props) {
                 <td>Monthly Cost</td>
                 <td>$300–$1,000+ shared</td>
                 <td>$2,000–$5,000+/mo</td>
-                <td className="sf-col">$125/qualified estimate</td>
+                <td className="sf-col">You only pay for a qualified estimate</td>
               </tr>
               <tr className="fade-in" data-delay="600">
                 <td>Long-Term Contract</td>
