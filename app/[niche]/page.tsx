@@ -4,7 +4,6 @@ import { niches } from '@/config/niches';
 import Hero from '@/components/sections/Hero';
 import ProblemSection from '@/components/sections/ProblemSection';
 import SolutionSection from '@/components/sections/SolutionSection';
-import Subsystems from '@/components/sections/Subsystems';
 import Pricing from '@/components/sections/Pricing';
 import OnboardingTimeline from '@/components/sections/OnboardingTimeline';
 import Guarantee from '@/components/sections/Guarantee';
@@ -35,7 +34,6 @@ export default async function NichePage({ params }: Props) {
       <Hero niche={nicheData} />
       <ProblemSection niche={nicheData} />
       <SolutionSection niche={nicheData} />
-      <Subsystems niche={nicheData} />
       <Pricing niche={nicheData} />
       <OnboardingTimeline niche={nicheData} />
       <Guarantee niche={nicheData} />
