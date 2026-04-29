@@ -19,7 +19,7 @@ export default function Pricing({ niche }: Props) {
       <div className="pc fade-up d1">
         <h3>Pay Per Estimate</h3>
         <div className="ps2">Only pay when we book a qualified estimate</div>
-        <div className="sf">Setup Fee: <strong>$650</strong></div>
+        <div className="sf">Setup Fee: <strong>$675</strong></div>
         <div className="amt">$125</div>
         <div className="per">per qualified estimate</div>
         <ul>
@@ -32,7 +32,7 @@ export default function Pricing({ niche }: Props) {
           <li>Scale up or pause anytime</li>
           <li><strong>Client covers ad spend</strong></li>
         </ul>
-        <a href="https://book.stripe.com/6oU9AT0Va5gDeQZ8d5aVa0q" className="btn-p" target="_blank" rel="noopener noreferrer">Get Started →</a>
+        <a href="https://buy.stripe.com/bJe6oH1Ze7oLeQZfFxaVa0s" className="btn-p" target="_blank" rel="noopener noreferrer">Get Started →</a>
       </div>
       <div className="pc bundle fade-up d2">
         <div className="popular-badge">MOST POPULAR</div>
