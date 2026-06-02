@@ -41,11 +41,12 @@ export default function Pricing({ niche }: Props) {
         <div className="sf">Bundled Price: <strong>$1,455</strong></div>
         <div className="amt">$97</div>
         <div className="per">per qualified estimate</div>
-        <div className="gb">✅ 65 Estimates Guaranteed — Or We Work For Free Until We Do</div>
+        <div className="gb">✅ 45 Estimates Guaranteed — Or We Work For Free Until We Do</div>
         <ul>
           <li>Everything in Pay Per Estimate</li>
           <li>Discounted per-estimate cost</li>
-          <li>Guaranteed 65 estimates</li>
+          <li>Guaranteed 45 estimates</li>
+          <li><strong>$97 for every missed estimate</strong></li>
           <li>Priority support & optimization</li>
           <li>Predictable budget</li>
           <li><strong>Client covers ad spend</strong> (min. $30/day)</li>
