@@ -138,5 +138,33 @@ export const niches: Niche[] = [
     zip_1: "43604", zip_2: "43606", zip_3: "43614", zip_4: "43615", zip_5: "43617",
     roi_js_min: "2000", roi_js_max: "30000", roi_js_val: "8000", roi_js_step: "500", roi_js_val_fmt: "8,000",
     adsImage: "/assets/Concrete.png"
+  },
+  {
+    id: "tree-removal",
+    title: "Tree Removal",
+    niche_plural: "Tree Removal Companies",
+    revenue_potential: "$50K–$200K+",
+    niche_business: "Tree Service",
+    cheap_fix: "$200 branch trimming",
+    premium_job: "$5K large tree removal & stump grinding",
+    niche_work: "tree removal and stump grinding",
+    niche_work_short: "tree service work",
+    niche_contractors: "tree service professionals",
+    niche_companies: "tree removal companies",
+    customer_type_plural: "homeowners",
+    customer_type_singular: "homeowner",
+    pain_point_example: "dead tree threatening your roof",
+    ad_headline_example: "\"Dangerous Tree Can Crush Your Home. Don't Wait.\" 🌳",
+    niche_estimate: "site safety inspection",
+    sample_address: "321 Oak St, Columbus OH",
+    zip_1: "43026", zip_2: "43017", zip_3: "43235", zip_4: "43085", zip_5: "43016",
+    roi_js_min: "1000", roi_js_max: "20000", roi_js_val: "3000", roi_js_step: "500", roi_js_val_fmt: "3,000",
+    adsImage: "/assets/Tree Removal.jpg",
+    ad_images: [
+      "/assets/tree-ad-1.png",
+      "/assets/tree-ad-2.png",
+      "/assets/tree-ad-3.png",
+      "/assets/tree-ad-4.png"
+    ]
   }
 ];
