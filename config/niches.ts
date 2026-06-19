@@ -159,7 +159,7 @@ export const niches: Niche[] = [
     sample_address: "321 Oak St, Columbus OH",
     zip_1: "43026", zip_2: "43017", zip_3: "43235", zip_4: "43085", zip_5: "43016",
     roi_js_min: "1000", roi_js_max: "20000", roi_js_val: "3000", roi_js_step: "500", roi_js_val_fmt: "3,000",
-    adsImage: "/assets/Tree Removal.jpg",
+    adsImage: "/assets/Tree Removal.png",
     ad_images: [
       "/assets/tree-ad-1.png",
       "/assets/tree-ad-2.png",
