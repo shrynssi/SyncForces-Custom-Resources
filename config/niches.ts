@@ -166,5 +166,33 @@ export const niches: Niche[] = [
       "/assets/tree-ad-3.png",
       "/assets/tree-ad-4.png"
     ]
+  },
+  {
+    id: "decks",
+    title: "Decks & Patios",
+    niche_plural: "Deck Builders",
+    revenue_potential: "$50K–$250K+",
+    niche_business: "Deck Building",
+    cheap_fix: "$300 board replacement",
+    premium_job: "$15K custom composite deck",
+    niche_work: "custom deck builds & replacements",
+    niche_work_short: "deck building work",
+    niche_contractors: "deck builders",
+    niche_companies: "deck building companies",
+    customer_type_plural: "homeowners",
+    customer_type_singular: "homeowner",
+    pain_point_example: "splintering wood and unstable posts",
+    ad_headline_example: "\"Unstable Deck Can Cause Injuries. Replace it fast.\" 🔨",
+    niche_estimate: "free deck design",
+    sample_address: "456 Birch Ln, Columbus OH",
+    zip_1: "43026", zip_2: "43017", zip_3: "43235", zip_4: "43085", zip_5: "43016",
+    roi_js_min: "3000", roi_js_max: "40000", roi_js_val: "12000", roi_js_step: "1000", roi_js_val_fmt: "12,000",
+    adsImage: "/assets/Decks.png",
+    ad_images: [
+      "/assets/deck-ad-1.png",
+      "/assets/deck-ad-2.png",
+      "/assets/deck-ad-3.png",
+      "/assets/deck-ad-4.png"
+    ]
   }
 ];
