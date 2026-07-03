@@ -17,11 +17,11 @@ export default function Pricing({ niche }: Props) {
     </div>
     <div className="pricing-grid">
       <div className="pc fade-up d1">
-        <h3>Pay Per Estimate</h3>
-        <div className="ps2">Only pay when we book a qualified estimate</div>
-        <div className="sf">Setup Fee: <strong>$475</strong></div>
-        <div className="amt">$150</div>
-        <div className="per">per qualified estimate</div>
+        <h3>Option 1</h3>
+        <div className="ps2">Lower per-appointment cost</div>
+        <div className="sf">Setup Fee: <strong>$300</strong></div>
+        <div className="amt">$147</div>
+        <div className="per">per appointment</div>
         <ul>
           <li>Targeted Meta ad campaigns</li>
           <li>Full lead qualification</li>
@@ -36,15 +36,15 @@ export default function Pricing({ niche }: Props) {
       </div>
       <div className="pc bundle fade-up d2">
         <div className="popular-badge">MOST POPULAR</div>
-        <h3>15 Estimate Bundle</h3>
-        <div className="ps2">Guaranteed volume, discounted pricing</div>
-        <div className="sf">Bundled Price: <strong>$1,455</strong></div>
-        <div className="amt">$97</div>
-        <div className="per">per qualified estimate</div>
+        <h3>Option 2</h3>
+        <div className="ps2">Lowest barrier to entry</div>
+        <div className="sf">Setup Fee: <strong>$1</strong></div>
+        <div className="amt">$197</div>
+        <div className="per">per appointment</div>
         <div className="gb">✅ 45 Estimates Guaranteed — Or We Work For Free Until We Do</div>
         <ul>
-          <li>Everything in Pay Per Estimate</li>
-          <li>Discounted per-estimate cost</li>
+          <li>Everything in Option 1</li>
+          <li>Minimal upfront commitment</li>
           <li>Guaranteed 45 estimates</li>
           <li><strong>$97 for every missed estimate</strong></li>
           <li>Priority support & optimization</li>
