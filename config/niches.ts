@@ -194,5 +194,33 @@ export const niches: Niche[] = [
       "/assets/deck-ad-3.png",
       "/assets/deck-ad-4.png"
     ]
+  },
+  {
+    id: "pergolas",
+    title: "Pergolas & Shade",
+    niche_plural: "Pergola Builders",
+    revenue_potential: "$40K–$200K+",
+    niche_business: "Pergola Building",
+    cheap_fix: "$200 patio umbrella",
+    premium_job: "$10K custom wood pergola",
+    niche_work: "custom pergola builds & patio shade",
+    niche_work_short: "pergola building work",
+    niche_contractors: "pergola builders",
+    niche_companies: "pergola building companies",
+    customer_type_plural: "homeowners",
+    customer_type_singular: "homeowner",
+    pain_point_example: "sun-baked, unusable patio",
+    ad_headline_example: "\"Unshaded Patio Can Cause Discomfort. Protect your space.\" ☀️",
+    niche_estimate: "site design consult",
+    sample_address: "123 Elm St, Cincinnati OH",
+    zip_1: "45202", zip_2: "45208", zip_3: "45209", zip_4: "45243", zip_5: "45226",
+    roi_js_min: "2000", roi_js_max: "30000", roi_js_val: "8000", roi_js_step: "1000", roi_js_val_fmt: "8,000",
+    adsImage: "/assets/Pergolas.png",
+    ad_images: [
+      "/assets/pergola-ad-1.png",
+      "/assets/pergola-ad-2.png",
+      "/assets/pergola-ad-3.png",
+      "/assets/pergola-ad-4.png"
+    ]
   }
 ];
