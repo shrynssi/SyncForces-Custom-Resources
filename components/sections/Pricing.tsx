@@ -16,7 +16,8 @@ export default function Pricing({ niche }: Props) {
       <p className="section-sub">No hidden fees. No long-term contracts. Just results.</p>
     </div>
     <div className="pricing-grid">
-      <div className="pc fade-up d1">
+      <div className="pc bundle fade-up d1">
+        <div className="popular-badge">MOST POPULAR</div>
         <h3>Option 1</h3>
         <div className="ps2">Lower per-appointment cost</div>
         <div className="sf">Setup Fee: <strong>$300</strong></div>
@@ -34,19 +35,15 @@ export default function Pricing({ niche }: Props) {
         </ul>
         <a href="https://buy.stripe.com/bJe6oH1Ze7oLeQZfFxaVa0s" className="btn-p" target="_blank" rel="noopener noreferrer">Get Started →</a>
       </div>
-      <div className="pc bundle fade-up d2">
-        <div className="popular-badge">MOST POPULAR</div>
+      <div className="pc fade-up d2">
         <h3>Option 2</h3>
         <div className="ps2">Lowest barrier to entry</div>
         <div className="sf">Setup Fee: <strong>$1</strong></div>
         <div className="amt">$197</div>
         <div className="per">per appointment</div>
-        <div className="gb">✅ 45 Estimates Guaranteed — Or We Work For Free Until We Do</div>
         <ul>
           <li>Everything in Option 1</li>
           <li>Minimal upfront commitment</li>
-          <li>Guaranteed 45 estimates</li>
-          <li><strong>$97 for every missed estimate</strong></li>
           <li>Priority support & optimization</li>
           <li>Predictable budget</li>
           <li><strong>Client covers ad spend</strong> (min. $30/day)</li>
